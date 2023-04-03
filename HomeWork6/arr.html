@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВрумВрум</title>
+</head>
+<body>
+    <script>
+        let employees = {
+             "emp_no": '1001',
+             "salaries": [
+                {
+                    "salary": 15670,
+                    "from_date": 2012
+                },
+                {
+                    "salary": 50670,
+                    "from_date": 2018
+                },
+                {
+                    "salary": 30670,
+                    "from_date": 2022
+                },
+             ]/*,
+             
+             get max() {
+                let arr_salary = this.salaries.map((item, index, array) => {
+                    return item.salary
+                })
+                let salary_sort = arr_salary.sort((a, b) => a-b);
+                let s_max = salary_sort[salary_sort.length-1];
+                return s_max;
+             },
+
+             get min() {
+                let arr_salary = this.salaries.map((item, index, array) => {
+                    return item.salary
+                })
+                let salary_sort = arr_salary.sort((a, b) => a-b);
+                let s_min = salary_sort[0];
+                return s_min;
+             },
+
+             get avg() {
+                let arr_salary = this.salaries.map((item, index, array) => {
+                    return item.salary
+                })
+                let s_sum = arr_salary.reduce((sum, item, index, array) => {
+                    return sum + item
+                })
+                let s_avg = s_sum / arr_salary.length;
+                return s_avg
+
+             }*/
+            }
+
+            /*console.log("Max з/п",employees.max)
+            console.log("Min з/п",employees.min)
+            console.log("AVG з/п",employees.avg)*/
+            
+            let arr_salary = employees.salaries.map((item, index, array) => {
+                    return item.salary
+                })
+            let salary_sort = arr_salary.sort((a, b) => a-b);
+
+            let s_max = salary_sort[salary_sort.length-1];
+            let s_min = salary_sort[0];
+            let s_sum = arr_salary.reduce((sum, item, index, array) => {
+                    return sum + item
+                })
+            let s_avg = s_sum / arr_salary.length;
+            
+            console.log("Max з/п",s_max)
+            console.log("Min з/п",s_min)
+            console.log("AVG з/п",s_avg)            
+        
+    </script>
+</body>
+</html>

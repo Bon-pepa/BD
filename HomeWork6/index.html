@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВжухВжух</title>
+</head>
+<body>
+    <script>
+        let employees = {
+             "emp_no": '1001',
+             "salaries": [
+                {
+                    "salary": "15670",
+                    "from_date": 2012
+                },
+                {
+                    "salary": "50670",
+                    "from_date": 2014
+                },
+                {
+                    "salary": "30670",
+                    "from_date": 2016
+                },
+                {
+                    "salary": "30675",
+                    "from_date": 2018
+                },
+                {
+                    "salary": "55554",
+                    "from_date": 2020
+                },
+             ]}
+             let arr_salaries = employees.salaries.map((item, index, array) => {
+                    return item.salary
+                })
+            
+            let arr_salary = arr_salaries.map((item,index,array) => {
+                    return item.split("")
+            })
+
+            let unique_num = [];
+
+            for (let i = 0; i< arr_salary.length; i++) {
+                unique_num[i] = arr_salary[i].reduce((sum, item, index, array) => {
+                    return Number(sum) + Number(item)
+                })
+            }
+
+            let happy = 16;
+
+            alert("Поздравляем вы виграли!!!");
+
+            console.log(arr_salaries)
+            console.log(unique_num);
+    </script>
+</body>
+</html>
